@@ -11,7 +11,9 @@ public class ServerServicesConfig {
   private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
   public static final String[] STATICS =
-      new String[] {"/css/**.css", "/img/**", "/webjars/bootstrap/**", "/webjars/jquery/**"};
+      new String[] {
+        "/css/**.css", "/js/**.js", "/img/**", "/webjars/bootstrap/**", "/webjars/jquery/**"
+      };
 
   public ServerServicesConfig() {}
 
