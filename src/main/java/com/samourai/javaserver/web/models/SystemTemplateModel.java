@@ -13,7 +13,7 @@ public class SystemTemplateModel extends DashboardTemplateModel {
   public Map<String, String> metrics;
 
   public SystemTemplateModel(String pageTitle, String logoTitle, Map<String, String> metrics) {
-    super(pageTitle, logoTitle);
+    super(pageTitle, logoTitle, "system");
 
     this.threads = ServerUtils.getInstance().getThreads();
     if (false) { // template usage

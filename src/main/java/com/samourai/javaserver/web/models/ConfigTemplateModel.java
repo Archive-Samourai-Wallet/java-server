@@ -7,7 +7,7 @@ public class ConfigTemplateModel extends DashboardTemplateModel {
   public Map<String, String> configInfo;
 
   public ConfigTemplateModel(String pageTitle, String logoTitle, Map<String, String> configInfo) {
-    super(pageTitle, logoTitle);
+    super(pageTitle, logoTitle, "config");
     this.configInfo = configInfo;
   }
 

@@ -6,13 +6,13 @@
 
 <ul th:fragment="menu" class="nav flex-column">
     <li class="nav-item">
-        <a th:class="${currentPage == 'item1'} ? 'nav-link active' : 'nav-link'" href="/item1">
+        <a th:class="${dashboardModel.currentPage == 'item1'} ? 'nav-link active' : 'nav-link'" href="/item1">
             <span data-feather="play"></span>
             Item 1
         </a>
     </li>
     <li class="nav-item">
-        <a th:class="${currentPage == 'item2'} ? 'nav-link active' : 'nav-link'" href="/item2">
+        <a th:class="${dashboardModel.currentPage == 'item2'} ? 'nav-link active' : 'nav-link'" href="/item2">
             <span data-feather="list"></span>
             Item 2
         </a>
