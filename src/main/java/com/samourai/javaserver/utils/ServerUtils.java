@@ -49,9 +49,7 @@ public class ServerUtils {
   public Collection<Thread> getThreads() {
     ThreadGroup tg = Thread.currentThread().getThreadGroup();
     Collection<Thread> threads =
-        Thread.getAllStackTraces()
-            .keySet()
-            .stream()
+        Thread.getAllStackTraces().keySet().stream()
             .filter(
                 (t) -> {
                   return t.getThreadGroup() == tg;

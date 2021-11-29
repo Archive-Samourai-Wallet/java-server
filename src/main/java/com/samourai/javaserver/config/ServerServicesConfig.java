@@ -2,7 +2,7 @@ package com.samourai.javaserver.config;
 
 import com.samourai.javaserver.utils.ServerUtils;
 import java.lang.invoke.MethodHandles;
-import nz.net.ultraq.thymeleaf.LayoutDialect;
+import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
