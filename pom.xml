@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.samourai.code.whirlpool</groupId>
 	<artifactId>java-server</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<name>java-server</name>
 	<properties>
 		<project.scm.id>samourai</project.scm.id>
-		<spring-boot.version>2.6.0</spring-boot.version>
-		<spring-security.version>5.6.0</spring-security.version>
+		<spring-boot.version>2.6.2</spring-boot.version>
+		<spring-security.version>5.6.1</spring-security.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -77,30 +77,6 @@
 					<artifactId>android-json</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>4.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.platform</groupId>
-			<artifactId>junit-platform-launcher</artifactId>
-			<version>1.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.200</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>
