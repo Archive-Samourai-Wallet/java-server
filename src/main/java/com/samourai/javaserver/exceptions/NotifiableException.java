@@ -38,6 +38,6 @@ public class NotifiableException extends Exception {
       return (NotifiableException) e;
     }
     log.warn("Exception obfuscated to user", e);
-    return new NotifiableException(JavaServerErrorCode.SERVER_ERROR, "Error");
+    return new NotifiableException(500, "Error");
   }
 }

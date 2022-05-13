@@ -1,6 +1,5 @@
 package com.samourai.javaserver.rest;
 
-import com.samourai.javaserver.exceptions.JavaServerErrorCode;
 import com.samourai.javaserver.exceptions.NotifiableException;
 import com.samourai.javaserver.exceptions.RestException;
 import org.springframework.http.HttpHeaders;
@@ -37,8 +36,6 @@ public abstract class AbstractRestExceptionHandler extends ResponseEntityExcepti
       HttpStatus status,
       WebRequest request) {
     return exceptionHandler(
-        new NotifiableException(
-            JavaServerErrorCode.SERVER_ERROR,
-            "Invalid parameter: " + e.getParameter().getParameterName()));
+        new NotifiableException(601, "Invalid parameter: " + e.getParameter().getParameterName()));
   }
 }
