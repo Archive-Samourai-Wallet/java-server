@@ -6,21 +6,27 @@ import org.springframework.http.HttpStatus;
 
 public class NotifiableException extends Exception {
   private static final Logger log = LoggerFactory.getLogger(NotifiableException.class);
-  private static final HttpStatus STATUS_DEFAULT = HttpStatus.INTERNAL_SERVER_ERROR;
+  public static final HttpStatus STATUS_DEFAULT = HttpStatus.INTERNAL_SERVER_ERROR;
 
+  private int errorCode;
   private HttpStatus httpStatus;
 
-  public NotifiableException(String message) {
-    this(message, STATUS_DEFAULT);
+  public NotifiableException(int errorCode, String message) {
+    this(errorCode, message, STATUS_DEFAULT);
   }
 
-  public NotifiableException(HttpStatus status) {
-    this(status.getReasonPhrase(), status);
+  public NotifiableException(int errorCode, HttpStatus status) {
+    this(errorCode, status.getReasonPhrase(), status);
   }
 
-  public NotifiableException(String message, HttpStatus httpStatus) {
+  public NotifiableException(int errorCode, String message, HttpStatus httpStatus) {
     super(message);
+    this.errorCode = errorCode;
     this.httpStatus = httpStatus;
+  }
+
+  public int getErrorCode() {
+    return errorCode;
   }
 
   public HttpStatus getHttpStatus() {
@@ -32,6 +38,6 @@ public class NotifiableException extends Exception {
       return (NotifiableException) e;
     }
     log.warn("Exception obfuscated to user", e);
-    return new NotifiableException("Error");
+    return new NotifiableException(JavaServerErrorCode.SERVER_ERROR, "Error");
   }
 }
