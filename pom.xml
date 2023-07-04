@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.samourai.code.whirlpool</groupId>
 	<artifactId>java-server</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8-SNAPSHOT</version>
 	<name>java-server</name>
 	<properties>
 		<project.scm.id>samourai</project.scm.id>
@@ -64,6 +64,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>4.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.6.0</version>
 		</dependency>
 		<!-- test -->
 		<dependency>
