@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.samourai.code.whirlpool</groupId>
 	<artifactId>java-server</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9-SNAPSHOT</version>
 	<name>java-server</name>
 	<properties>
 		<project.scm.id>samourai</project.scm.id>
@@ -69,6 +69,12 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>3.6.0</version>
+		</dependency>
+		<!-- fix Java 8 date/time type `java.time.Duration` support -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>2.13.1</version>
 		</dependency>
 		<!-- test -->
 		<dependency>

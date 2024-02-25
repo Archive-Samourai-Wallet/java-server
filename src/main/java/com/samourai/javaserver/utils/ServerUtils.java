@@ -1,6 +1,7 @@
 package com.samourai.javaserver.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.lang.invoke.MethodHandles;
 import java.util.Collection;
 import java.util.Comparator;
@@ -15,13 +16,15 @@ public class ServerUtils {
   public static final String PROFILE_TEST = "test";
   public static final String PROFILE_DEFAULT = "default";
 
-  private static final ObjectMapper objectMapper = new ObjectMapper();
+  private final ObjectMapper objectMapper = new ObjectMapper();
 
   private static ServerUtils instance;
 
   public static ServerUtils getInstance() {
     if (instance == null) {
       instance = new ServerUtils();
+      // fix Java 8 date/time type `java.time.Duration` support
+      instance.objectMapper.registerModule(new JavaTimeModule());
     }
     return instance;
   }

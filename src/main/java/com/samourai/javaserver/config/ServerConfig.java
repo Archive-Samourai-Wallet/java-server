@@ -6,6 +6,7 @@ import org.springframework.util.StringUtils;
 
 public abstract class ServerConfig {
   private String name;
+  private String metricsLokiUrl;
 
   public String getName() {
     return name;
@@ -13,6 +14,14 @@ public abstract class ServerConfig {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getMetricsLokiUrl() {
+    return metricsLokiUrl;
+  }
+
+  public void setMetricsLokiUrl(String metricsLokiUrl) {
+    this.metricsLokiUrl = metricsLokiUrl;
   }
 
   public void validate() throws Exception {
@@ -24,6 +33,7 @@ public abstract class ServerConfig {
   public Map<String, String> getConfigInfo() {
     Map<String, String> configInfo = new LinkedHashMap<>();
     configInfo.put("name", name);
+    configInfo.put("metricsLokiUrl", metricsLokiUrl);
     return configInfo;
   }
 }
